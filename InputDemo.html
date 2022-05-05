@@ -40,6 +40,7 @@
             <div>
                 <label for="tel">tel input type:</label>
                 <input type="tel" id="tel" name="tel">
+                <error-output class="tel-error" for="tel"></error-output>
             </div>
 
             <div>
@@ -77,6 +78,7 @@
                 textError.textContent="Name Is Incorrect";
             });
             
+            
             const email=document.querySelector("#email");
              const emailError=document.querySelector('.email-error');
              
@@ -91,6 +93,19 @@
             });
 
 
+            const tel=document.querySelector("#tel");
+             const telError=document.querySelector('.tel-error');
+             
+            tel.addEventListener('input',function()
+            {
+                let telRegex=RegExp('^91[7-9]{1}[0-9]{9}$');
+                if(telRegex.test(tel.value))
+               telError.textContent="";
+                else 
+               telError.textContent="Phone Number is not valid";
+
+            });
+
 
 
             
@@ -102,12 +117,11 @@
                 output.textContent=salary.value;
             });
            
-            
+        
 
 
         </script>
-    </body>
-</html>
-        </form>
-    </body>
-</html>
+      </body>
+       </html>   
+     
+
