@@ -69,3 +69,10 @@ button{
     font-style: italic;
     color: red;
 }
+
+.pwd-error
+{
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
