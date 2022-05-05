@@ -62,3 +62,10 @@ button{
     font-style: italic;
     color: red;
 }
+
+.tel-error
+{
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
